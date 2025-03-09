@@ -66,6 +66,8 @@ class Blockchain {
 
 }
 
+module.exports = { Block, Blockchain };
+
 console.log("Hello, Blockchain!");
 let myBlockchain = new Blockchain();
 
@@ -78,7 +80,7 @@ console.log("Blockchain validity: ", myBlockchain.isChainValid());
 
 console.log("\nChange a block under index 5: ");
 myBlockchain.chain[4].data = { amount: 1000 };
-myBlockchain.chain[4].hash = myBlockchain.chain[4].calculateHash();
+// myBlockchain.chain[4].hash = myBlockchain.chain[4].calculateHash();
 console.log("Blockchain validity with recalculated hash: ", myBlockchain.isChainValid());
 
 console.log("\nChange the last block: ");
